@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="APEX HUT — Hong Kong self pick-up site. Convenient parcel collection in Hong Kong.">
+  <title>APEX HUT | Hong Kong Self Pick-up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/company_logo.jpg" type="image/jpeg">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" data-i18n-aria="aria.home">
+        <img src="images/company_logo.jpg" alt="APEX HUT logo" class="brand-logo" width="56" height="56">
+        <div class="brand-text">
+          <span class="brand-name">APEX HUT</span>
+          <span class="brand-cn">派豐驛</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button class="nav-toggle" type="button" data-i18n-aria="aria.openMenu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <a href="#about" data-i18n="nav.about">About Us</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a href="#find-us" data-i18n="nav.findUs">Find Us</a>
+        </nav>
+        <div class="lang-switch" role="group" data-i18n-aria="aria.langSwitch">
+          <button type="button" class="lang-btn is-active" data-lang="zh" aria-pressed="true">繁</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow" data-i18n="hero.eyebrow">Hong Kong Self Pick-up</p>
+          <h1 data-i18n="hero.title">Your trusted pick-up point in Hong Kong</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            APEX HUT makes parcel collection simple — fast, reliable, and right in your neighbourhood.
+          </p>
+          <div class="hero-actions">
+            <a href="#find-us" class="btn btn-primary" data-i18n="hero.findUs">Find Us</a>
+            <a href="#about" class="btn btn-secondary" data-i18n="hero.about">About Us</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-card">
+            <img src="images/company_logo.jpg" alt="" class="hero-card-logo">
+            <p class="hero-card-tag">派豐驛</p>
+            <p class="hero-card-sub" data-i18n="hero.cardSub">Convenient · Secure · Local</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label" data-i18n="about.label">About Us</span>
+          <h2 data-i18n="about.title">Built for easy self pick-up</h2>
+          <p class="section-intro" data-i18n="about.intro">
+            APEX HUT is a Hong Kong self pick-up site designed to make receiving parcels effortless.
+          </p>
+        </div>
+        <div class="about-grid">
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.5Z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.card1.title">Local &amp; accessible</h3>
+            <p data-i18n="about.card1.text">
+              We are rooted in Hong Kong, offering a convenient neighbourhood location so you can collect packages on your schedule.
+            </p>
+          </article>
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.card2.title">Safe &amp; reliable</h3>
+            <p data-i18n="about.card2.text">
+              Your parcels are handled with care. We provide a secure pick-up experience you can count on, every time.
+            </p>
+          </article>
+          <article class="about-card">
+            <div class="about-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 data-i18n="about.card3.title">Flexible hours</h3>
+            <p data-i18n="about.card3.text">
+              Pick up when it suits you. We aim to keep collection straightforward so you spend less time waiting and more time living.
+            </p>
+          </article>
+        </div>
+        <div class="about-story">
+          <div class="about-story-text">
+            <h3 data-i18n="about.story.title">Who we are</h3>
+            <p data-i18n="about.story.p1">
+              APEX HUT (派豐驛) is dedicated to bridging the gap between online shopping and real-world convenience.
+              As a Hong Kong self pick-up site, we help customers receive deliveries without the hassle of missed drop-offs or long courier windows.
+            </p>
+            <p data-i18n="about.story.p2">
+              Whether you shop locally or internationally, our goal is the same: a smooth, friendly pick-up experience at a location that works for you.
+            </p>
+          </div>
+          <ul class="about-highlights">
+            <li>
+              <strong data-i18n="about.hl1.title">Hong Kong focused</strong>
+              <span data-i18n="about.hl1.text">Serving the local community with a dedicated pick-up point.</span>
+            </li>
+            <li>
+              <strong data-i18n="about.hl2.title">Customer first</strong>
+              <span data-i18n="about.hl2.text">Clear communication and a welcoming collection environment.</span>
+            </li>
+            <li>
+              <strong data-i18n="about.hl3.title">Growing with you</strong>
+              <span data-i18n="about.hl3.text">More details — including our full address — will be shared here soon.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label" data-i18n="contact.label">Contact</span>
+          <h2 data-i18n="contact.title">Get in touch</h2>
+          <p class="section-intro" data-i18n="contact.intro">
+            Questions about your parcel or our pick-up service? Reach us by phone, WhatsApp, or email.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="contact.phone">Phone</h3>
+            <p class="contact-value" id="contact-phone-value">Coming soon</p>
+            <a class="contact-link is-disabled" id="contact-phone-link" aria-disabled="true" data-i18n="contact.call">Call us</a>
+          </article>
+          <article class="contact-card contact-card-featured">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+              </svg>
+            </div>
+            <h3 data-i18n="contact.whatsapp">WhatsApp</h3>
+            <p class="contact-value" id="contact-whatsapp-value">Coming soon</p>
+            <a class="contact-link is-disabled" id="contact-whatsapp-link" aria-disabled="true" data-i18n="contact.chat">Chat on WhatsApp</a>
+          </article>
+          <article class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <h3 data-i18n="contact.email">Email</h3>
+            <p class="contact-value" id="contact-email-value">Coming soon</p>
+            <a class="contact-link is-disabled" id="contact-email-link" aria-disabled="true" data-i18n="contact.write">Send email</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="find-us">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label" data-i18n="findUs.label">Find Us</span>
+          <h2 data-i18n="findUs.title">Visit our pick-up site</h2>
+          <p class="section-intro" data-i18n="findUs.intro">
+            Use the map below to locate APEX HUT. Our full street address will be added once confirmed.
+          </p>
+        </div>
+        <div class="find-us-layout">
+          <div class="location-panel">
+            <div class="location-card">
+              <h3 data-i18n="findUs.location">Location</h3>
+              <p class="location-address is-placeholder" id="site-address">Address coming soon</p>
+              <p class="location-note" data-i18n="findUs.note">
+                We are setting up our Hong Kong pick-up site. Check back here for the exact address, or contact us for directions.
+              </p>
+              <dl class="location-details">
+                <div>
+                  <dt data-i18n="findUs.region">Region</dt>
+                  <dd data-i18n="findUs.regionValue">Hong Kong</dd>
+                </div>
+                <div>
+                  <dt data-i18n="findUs.service">Service</dt>
+                  <dd data-i18n="findUs.serviceValue">Self pick-up</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="location-card">
+              <h3 data-i18n="findUs.hours">Opening hours</h3>
+              <ul class="hours-list" id="hours-list"></ul>
+              <p class="hours-note" id="hours-note"></p>
+            </div>
+            <div class="location-card location-card-muted">
+              <h3 data-i18n="findUs.gettingHere">Getting here</h3>
+              <p id="getting-here-text"></p>
+            </div>
+          </div>
+          <div class="map-panel">
+            <div id="map" class="map" role="img" data-i18n-aria="findUs.mapAria"></div>
+            <p class="map-caption" data-i18n="findUs.mapCaption">Wo Lok Estate, Ping On House — Shop S1, ground floor.</p>
+            <p class="map-actions">
+              <a id="map-open-link" class="map-open-link" href="#" target="_blank" rel="noopener noreferrer" data-i18n="findUs.openInOsm">Open in OpenStreetMap</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/company_logo.jpg" alt="" class="footer-logo" width="40" height="40">
+        <div>
+          <p class="footer-name">APEX HUT</p>
+          <p class="footer-cn" data-i18n="footer.tagline">派豐驛 · Hong Kong Self Pick-up</p>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> APEX HUT. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
