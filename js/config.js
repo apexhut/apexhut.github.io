@@ -39,5 +39,5 @@ const SITE_CONFIG = {
   },
 
   // Custom domain for GitHub Pages — also update the CNAME file in the project root
-  customDomain: "apexhuthk.com",
+  customDomain: "www.apexhuthk.com",
 };
