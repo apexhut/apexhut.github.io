@@ -24,9 +24,9 @@ const SITE_CONFIG = {
   },
 
   // Contact — leave blank to show "coming soon"
-  phone: "", // e.g. "+852 1234 5678"
-  whatsapp: "", // digits only with country code, e.g. "85212345678"
-  email: "", // e.g. "hello@apexhut.hk"
+  phone: "+852 6144 9616", // e.g. "+852 1234 5678"
+  whatsapp: "85261449616", // digits only with country code, e.g. "85212345678"
+  email: "apexhuthk@hotmail.com", // e.g. "hello@apexhut.hk"
 
   // Opening hours — edit times or set `enabled: false` on a row to hide it
   hours: [
