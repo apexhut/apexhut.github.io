@@ -30,7 +30,7 @@ const SITE_CONFIG = {
 
   // Opening hours — edit times or set `enabled: false` on a row to hide it
   hours: [
-    { day: { en: "Mon – Sat", zh: "星期一至六" }, time: { en: "12:00 – 20:00", zh: "12:00 – 20:00" }, enabled: true },
+    { day: { en: "Mon – Sat", zh: "星期一至六" }, time: { en: "11:00 – 20:00", zh: "11:00 – 20:00" }, enabled: true },
     { day: { en: "Sun & public holidays", zh: "星期日及公眾假期" }, time: { en: "Closed", zh: "休息" }, enabled: true },
   ],
   hoursNote: {
